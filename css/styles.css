@@ -15,6 +15,7 @@ html{
     --light-bg-color:#F5F4FA;
     --phone-footer-color:rgba(255, 255, 255, 0.6);
     --btn-focus-hover:#188CE8;
+    --border-color: #EEEE;
 }
 body{
     margin: 0;
@@ -56,7 +57,7 @@ ul{
 .main-nav{
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #ECECEC;
+    border-bottom: 1px solid var(--border-color);
 }
 .nav-logo{
     display: flex;
@@ -77,6 +78,7 @@ ul{
     font-weight: 700;
     font-size: 26px;
     line-height: 1.2;
+    display: inline-block;
 }
 .not-ul{list-style: none;}
 
@@ -136,6 +138,8 @@ margin-left: 93px;
 /* section hero */
 .hero{
     background-color: var(--dark-bg-color);
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 .hero-title{
     color: var(--light-text-color);
@@ -164,6 +168,7 @@ margin-left: 93px;
 
     padding: 0;
     margin: 0 auto;
+    border-radius: 4px;
 }
 .btn:focus{
     background: var(--btn-focus-hover);
@@ -212,6 +217,9 @@ margin-left: 93px;
    /* .feauters-list .item {
    gap: 30px;
   } */
+.feauters-list .item{
+    width: 270px;
+}
 
   /* section what we doing */
   .services-title,
@@ -223,6 +231,7 @@ margin-left: 93px;
     line-height: 1.2;
     letter-spacing: 0.03em;
     text-align: center;
+    margin-bottom: 50px;
   }
   img{
     display: block;
@@ -260,10 +269,6 @@ background-color: var(--light-bg-color);
 .team-list .team-photos:not(:last-child){
     margin-right: 30px;
 }
-.team-title{
-    margin-bottom: 50px;
-}
-
 
 .ihor{
     padding: 30px 71px 30px 70px;
@@ -316,7 +321,20 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 .footer-mail:focus{
 color: var(--accent-color);
 }
+
+.logo-footer{
+    display: inline-block;
+    margin-bottom: 20px;
+    }
+
+
 /* portfolio */
+
+.portfolio-btns{
+display: flex;
+justify-content: center;
+}
+
 .btn-portfolio{
     font-family: inherit;
     font-weight: 500;
@@ -325,10 +343,18 @@ color: var(--accent-color);
  background-color: var(--light-bg-color); 
  color: var(--title-text-color);
  cursor: pointer;
- display: block;
  width: 125px;
- height: 38px;  
+ height: 38px; 
+ display: block;
+ border: none;
+ border: 4px;
 }
+
+.portfolio-btns .item:not(:last-child){
+    margin-right: 8px;
+    margin-bottom: 46px;
+}
+
 .btn-portfolio:hover{
     background-color: var(--accent-color);
     color: var(--light-text-color);
@@ -343,6 +369,8 @@ font-size: 18px;
 line-height:2;
 letter-spacing: 0.06em;
 color: var(--title-text-color);
+
+margin-bottom: 4px;
 }
 .portfolio-txt{
 font-size: 16px;
@@ -351,4 +379,30 @@ color:var(--main-text-color);
 }
 .not-link{
     text-decoration: none;
+}
+
+.portfolio-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio-list .item{
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.portfolio-list .item:nth-child(3n){
+    margin-right: 0;
+}
+.portfolio-list .item:nth-last-child(-n+3){
+    margin-bottom: 0px;
+}
+.border{
+    border: 1px solid var(--border-color);
+    padding: 20px 24px;
+}
+
+.site-footer{
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
